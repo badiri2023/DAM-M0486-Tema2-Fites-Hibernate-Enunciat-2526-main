@@ -37,7 +37,7 @@ public class Habilitat implements Serializable {
     // TO DO
 
     @ManyToMany(fetch = FetchType.LAZY)
-     @JoinTable(
+    @JoinTable(
         name = "Habilitat",
         joinColumns = @JoinColumn(name = "habilitatId"),
         inverseJoinColumns = @JoinColumn(name = "personatgeId")

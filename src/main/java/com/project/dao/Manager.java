@@ -117,8 +117,8 @@ public class Manager {
             tx = session.beginTransaction();
             habilitat = new Habilitat(nom, descripcio, cost);
             session.persist(habilitat);
+            
             System.out.println("[OK] Habiltat creada: " + nom);
-
             tx.commit();
         } catch (Exception e) {
             if (tx != null) tx.rollback();
@@ -165,7 +165,8 @@ public class Manager {
             personatge = new Personatge(nom, atac, defensa, faccio);
             
 
-            
+
+
             session.persist(personatge);
             System.out.println("[OK] Personatge creat: " + nom);
 
